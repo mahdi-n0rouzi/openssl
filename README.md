@@ -14,6 +14,33 @@
 - **CSR (Certificate Signing Request)** = “Hey CA, please sign this public key for this domain.”
 - **Certificate (`.crt`, `.pem`, `.cer`)** = public key + identity info + signature.
 - **CA (Certificate Authority)** = entity that signs certs (root or intermediate).
+## 📚 Table of Contents
+
+- [0. Quick Concepts](#0-quick-concepts-read-this-first)
+- [1. Check OpenSSL Version](#1-check-openssl-version)
+- [2. Generate Private Keys](#2-generate-private-keys)
+  - [2.1 RSA Private Key](#21-rsa-private-key)
+  - [2.2 RSA with genpkey](#22-rsa-private-key-modern-genpkey)
+  - [2.3 EC Private Key](#23-ec-elliptic-curve-private-key)
+  - [2.4 Add / Remove Password](#24-convert-key-with-or-without-password)
+- [3. Create a CSR](#3-create-a-csr-certificate-signing-request)
+  - [3.1 Interactive CSR](#31-simple-csr-interactive-questions)
+  - [3.2 Non-Interactive CSR](#32-non-interactive-csr-using-a-config-file)
+- [4. Self-Signed Certificates](#4-self-signed-certificates-for-testing)
+- [5. View and Inspect Files](#5-view-and-inspect-files)
+- [6. File Formats: PEM, DER, PFX](#6-file-formats-pem-der-pfx-etc)
+- [7. Hashing & Checksums](#7-hashing--checksums)
+- [8. Symmetric Encryption (AES)](#8-symmetric-encryption-aes-etc)
+- [9. Asymmetric Crypto: Sign & Verify](#9-asymmetric-crypto-sign--verify)
+- [10. Certificate Chain & Expiry](#10-check-certificate-chains--expiry)
+- [11. Debugging TLS Connections](#11-debugging-tls--https-connections)
+- [12. Diffie-Hellman Parameters](#12-generate-diffie-hellman-parameters)
+- [13. Password & Random Tools](#13-password--random-utilities)
+- [14. Identify Unknown Files](#14-mini-what-the-heck-is-this-file-guide)
+- [15. Useful One-Liners](#15-common-one-liners)
+- [16. Security Best Practices](#16-tips--best-practices)
+- [17. Quick Reference Table](#17-quick-reference-table)
+
 
 Common file formats:
 
