@@ -14,6 +14,16 @@
 - **CSR (Certificate Signing Request)** = “Hey CA, please sign this public key for this domain.”
 - **Certificate (`.crt`, `.pem`, `.cer`)** = public key + identity info + signature.
 - **CA (Certificate Authority)** = entity that signs certs (root or intermediate).
+
+Common file formats:
+
+- `.pem` = Base64 text with `-----BEGIN ...` / `-----END ...`
+- `.key` = private key (usually PEM)
+- `.crt` / `.cer` = certificate (PEM or DER)
+- `.pfx` / `.p12` = PKCS#12 bundle (cert + key + chain), usually password protected
+
+---
+
 ## 📚 Table of Contents
 
 - [0. Quick Concepts](#0-quick-concepts-read-this-first)
@@ -40,14 +50,6 @@
 - [15. Useful One-Liners](#15-common-one-liners)
 - [16. Security Best Practices](#16-tips--best-practices)
 - [17. Quick Reference Table](#17-quick-reference-table)
-
-
-Common file formats:
-
-- `.pem` = Base64 text with `-----BEGIN ...` / `-----END ...`
-- `.key` = private key (usually PEM)
-- `.crt` / `.cer` = certificate (PEM or DER)
-- `.pfx` / `.p12` = PKCS#12 bundle (cert + key + chain), usually password protected
 
 ---
 
